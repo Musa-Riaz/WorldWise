@@ -10,16 +10,16 @@ import { Link } from 'react-router-dom';
 // }
 
 const CityItem = ({city}) => {
+    
     const {cityName, emoji, date, id, position} = city;
     
-    console.log(city);
+    console.log(position);
  
   return (
 
  
-
     <li >
-      <Link className={styles.cityItem} to={`${id}?lng=${position.lng}&lat=${position.lat}`}>
+      <Link className={styles.cityItem}  to={`${id}?lat=${position.lat}&lng=${position.lng}`}>
       <span className={styles.emoji}>{emoji}</span>
         <h3 className={styles.name}>{cityName}</h3>
         <time className={styles.date}>{date}</time>
